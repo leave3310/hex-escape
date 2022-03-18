@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="container mx-auto mt-10">
+        <h1 class="text-3xl font-bold text-center">
+            六角西餐廳
+        </h1>
+    </header>
+    <main class="container mx-auto mt-8 w-4/5">
+        <form
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdN0M30GB6NSQxfeAhWK0B4PSpuIPGVLnoWo4TrksqtkeKtRA/formResponse"
+            method="post">
+            <div class="mx-auto md:flex justify-center mb-4">
+                <div class="mr-2 mb-4 md:mb-0 w-full md:w-2/4">
+                    <label for="name">
+                        姓名
+                    </label>
+                    <input id="name" name="entry.104959259" type="text" class="form-input w-full" onblur="getName()">
+                </div>
+                <div class="w-full md:w-2/4">
+                    <label for="phone">
+                        電話
+                    </label>
+                    <input id="phone" name="entry.403616441" type="tel" class="form-input w-full" onblur="getTel()">
+                </div>
+            </div>
+            <div class="mx-auto mb-4">
+                <div class="mr-2 w-full">
+                    <div>
+                        日期
+                    </div>
+                    <input type="date" class="form-input w-full" name="entry.650799372">
+                </div>
+            </div>
+            <div class="mx-auto mb-4">
+                <div class="mr-2 w-full">
+                    <label for="peopleNum">
+                        用餐人數
+                    </label>
+                    <select class="block w-full" name="entry.1491692660" id="peopleNum" name="entry.1491692660">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mx-auto mb-4">
+                <div class="mr-2 w-full">
+                    <div>
+                        其他項目
+                    </div>
+                    <ul>
+                        <li><input type="checkbox" name="entry.901461210" class="form-checkbox rounded mr-1"
+                                id="childChair" value="需要兒童座椅">
+                            <label for="childChair">需要兒童座椅</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="entry.901461210" class="form-checkbox rounded mr-1"
+                                id="vegetable" value="素食餐點">
+                            <label for="vegetable">素食餐點</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="entry.901461210" class="form-checkbox rounded mr-1" id="smoke"
+                                value="吸菸區">
+                            <label for="smoke">吸菸區</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="block w-full bg-slate-900 text-white	py-3" type="submit">送出</button>
+        </form>
+    </main>
+</body>
+
+</html>
