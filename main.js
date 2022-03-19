@@ -1,4 +1,5 @@
 const API_URL = 'https://hex-escape-room.herokuapp.com'
+const CORS_URL = 'https://kylen-cors-anywhere.herokuapp.com'
 let resData = []
 let sideDate = {}
 
@@ -15,7 +16,7 @@ const appendAside = () => {
                     <i class="bi bi-caret-left-fill"></i> 返回
                 </button>
                 <h2 class="mt-3">${sideDate.title}</h2>
-                <span>${dateFormat(item.publishedAt)}</span>
+                <span>${dateFormat(sideDate.publishedAt)}</span>
                 <img src="${sideDate.urlToImage}" class="img-fluid" alt="">
                 <p>${sideDate.description}
                 </p>
@@ -32,7 +33,7 @@ const cardClick = (event) => {
 
     $.ajax({
         type: "GET",
-        url: `${API_URL}/api/cors/news/${event.data.id}`,
+        url: `${CORS_URL}/${API_URL}/api/cors/news/${event.data.id}`,
         dataType: "json",
         success: (res) => {
             sideDate = res.data
