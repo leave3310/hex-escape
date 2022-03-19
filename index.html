@@ -5,89 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
-    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>超棒棒新聞列表</title>
 </head>
 
 <body>
-    <header class="container mx-auto mt-10">
-        <h1 class="text-3xl font-bold text-center">
-            六角西餐廳
-        </h1>
-    </header>
-    <main class="container mx-auto mt-8 w-4/5">
-        <form
-            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdN0M30GB6NSQxfeAhWK0B4PSpuIPGVLnoWo4TrksqtkeKtRA/formResponse"
-            method="post">
-            <div class="mx-auto md:flex justify-center mb-4">
-                <div class="mr-2 mb-4 md:mb-0 w-full md:w-2/4">
-                    <label for="name">
-                        姓名
-                    </label>
-                    <input id="name" name="entry.104959259" type="text" class="form-input w-full" onblur="getName()">
-                </div>
-                <div class="w-full md:w-2/4">
-                    <label for="phone">
-                        電話
-                    </label>
-                    <input id="phone" name="entry.403616441" type="tel" class="form-input w-full" onblur="getTel()">
-                </div>
-            </div>
-            <div class="mx-auto mb-4">
-                <div class="mr-2 w-full">
-                    <div>
-                        日期
+    <div class="container my-3">
+        <div class="row">
+            <div class="col">
+                <div class="card border-0 shadow-lg rounded-4 mb-3">
+                    <div class="card-body">
+                        <h4>超棒棒新聞列表</h4>
+                        <div class="row g-4 row-cols-md-2 row-cols-lg-3 row-cols-1 news-list">
+                            
+                        </div>
                     </div>
-                    <input type="date" class="form-input w-full" name="entry.650799372">
                 </div>
             </div>
-            <div class="mx-auto mb-4">
-                <div class="mr-2 w-full">
-                    <label for="peopleNum">
-                        用餐人數
-                    </label>
-                    <select class="block w-full" name="entry.1491692660" id="peopleNum" name="entry.1491692660">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
+
+            <!-- 預設不顯示，當點擊任一新聞時才會顯示 -->
+            <div class="col-12 col-md-6 col-lg-3 aside-news">
+                <div class="sticky-top">
+                    <!-- 點擊關閉側欄 -->
+                    <button class="btn btn-outline-secondary shadow border-0">
+                        <i class="bi bi-caret-left-fill"></i> 返回
+                    </button>
+                    <h2 class="mt-3">台鐵公司化 學者：提升效率、向心力 - 自由時報電子報</h2>
+                    <span>2022/2/15 上午5:30:00</span>
+                    <img src="https://img.ltn.com.tw/Upload/news/600/2022/02/15/94.jpg" class="img-fluid" alt="">
+                    <p>台鐵公司化喊了廿二年，即將啟動。學者表示，公司化後可提升效率、活絡軌道經濟等，並分析安全問題很大一部分源於人力不足、人力斷層導致經驗無法傳承，可透過公司化過程吸引專業人才。台大土木系教授、台大先進公共運輸研究中心主任張學孔指出，台鐵公司化已談了廿年，一定要好好把握這個時機。公司化優點包括政企分離提升效率、活絡軌道經濟，更能賞罰分明提升員工向心力。
+                    </p>
+                    <a href="https://news.ltn.com.tw/news/life/paper/1500586" target="blank">看更多</a>
                 </div>
             </div>
-            <div class="mx-auto mb-4">
-                <div class="mr-2 w-full">
-                    <div>
-                        其他項目
-                    </div>
-                    <ul>
-                        <li><input type="checkbox" name="entry.901461210" class="form-checkbox rounded mr-1"
-                                id="childChair" value="需要兒童座椅">
-                            <label for="childChair">需要兒童座椅</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="entry.901461210" class="form-checkbox rounded mr-1"
-                                id="vegetable" value="素食餐點">
-                            <label for="vegetable">素食餐點</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="entry.901461210" class="form-checkbox rounded mr-1" id="smoke"
-                                value="吸菸區">
-                            <label for="smoke">吸菸區</label>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <button class="block w-full bg-slate-900 text-white	py-3" type="submit">送出</button>
-        </form>
-    </main>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
