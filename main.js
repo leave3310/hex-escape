@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     const renderData = (src) => {
         const node = document.createElement('li')
-        node.className = "mb-5 grid-item bounce-in"
+        node.className = "mb-5 grid-item animate__animated animate__bounce"
         node.innerHTML =
             `<img src="${src}" alt="">`
         return node
@@ -21,7 +21,7 @@ $(document).ready(function () {
         imgSrc.forEach((item, index) => {
             setTimeout(() => {
                 bricklayer.append(renderData(item))
-            }, index * 1000)
+            }, index * 500)
         })
     }
 
