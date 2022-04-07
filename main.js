@@ -9,22 +9,27 @@ const dateFormat = (time) => {
 }
 
 const appendAside = () => {
-    $('.aside-news').append(`
-            <div class="sticky-top">
-            <!-- 點擊關閉側欄 -->
-                <button class="btn btn-outline-secondary shadow border-0">
-                    <i class="bi bi-caret-left-fill"></i> 返回
-                </button>
-                <h2 class="mt-3">${sideDate.title}</h2>
-                <span>${dateFormat(sideDate.publishedAt)}</span>
-                <img src="${sideDate.urlToImage}" class="img-fluid" alt="">
-                <p>${sideDate.description}
-                </p>
-                <a href="${sideDate.url}" target="blank">看更多</a>
+    const exist = document.getElementsByClassName('aside-news').length > 0
+    if (exist) $('.aside-news').remove()
+    
+    $('.row').append(`
+            <div class="col-12 col-md-6 col-lg-3 aside-news"> 
+                <div class="sticky-top">
+                    <button class="btn btn-outline-secondary shadow border-0">
+                        <i class="bi bi-caret-left-fill"></i> 返回
+                    </button>
+                    <h2 class="mt-3">${sideDate.title}</h2>
+                    <span>${dateFormat(sideDate.publishedAt)}</span>
+                    <img src="${sideDate.urlToImage}" class="img-fluid" alt="">
+                    <p>${sideDate.description}
+                    </p>
+                    <a href="${sideDate.url}" target="blank">看更多</a>
+                </div>
             </div>
     `)
+
     $(".btn").click(() => {
-        $(".sticky-top").remove()
+        $(".aside-news").remove()
     })
 }
 
