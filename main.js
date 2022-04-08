@@ -12,7 +12,7 @@ const appendAside = () => {
     const exist = document.getElementsByClassName('aside-news').length > 0
     if (exist) $('.aside-news').remove()
     
-    $('.row').append(`
+    $('.article-list').append(`
             <div class="col-12 col-md-6 col-lg-3 aside-news"> 
                 <div class="sticky-top">
                     <button class="btn btn-outline-secondary shadow border-0">
