@@ -1,0 +1,22 @@
+body {
+  background: #202d49;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+#svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform:translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+}
+.map-des {
+  font-size: 1.5rem;
+  color: #f3dc71;
+  position: absolute;
+  right: 20%;
+  top: 20%;
+}
